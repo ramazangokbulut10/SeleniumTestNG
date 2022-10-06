@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="tum tstleri calistirma" verbose="3" parallel="classes" thread-count="2">
+    <test name="regresion">
+        <packages>
+            <package name="tests.*"></package>
+        </packages>
+    </test>
+</suite>
+
+
+<!--Burada 2 ayri browser da calistik
+  1.class'i bir browser 2. class'i 2.browser gibi sirayla calistiriyor
+  paralel calistirmanin seviyesini burada classes olarak belirledik fakat
+  buyuk projelerde birbirine bagli calisan class'lar varsa bunu dikkate almak lazim
+  o zaman class seviyesinde farkli browser'larda calismak sorun olabilir-->

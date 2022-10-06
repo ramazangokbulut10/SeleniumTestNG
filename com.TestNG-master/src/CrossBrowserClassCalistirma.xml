@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Cross browser class calistirma">
+    <test name="Cross browser chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowser.C01_AssertionsCross"></class>
+            <class name="tests.day22_crossBrowser.C02_SoftAssertCross"></class>
+        </classes>
+    </test>
+    <test name="Cross browser firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day22_crossBrowser.C01_AssertionsCross"></class>
+            <class name="tests.day22_crossBrowser.C02_SoftAssertCross"></class>
+        </classes>
+    </test>
+</suite>
+
+<!-- PRAMETREM BROWSER VE DEGERİ OLARAK HANGISINDE CALISMASINI ISTIYORSAM ONU GIRIYORUM
+    VE SEVMIS OLDUGUM CLASSLAR AYNI ANDA ISTEDIGIM KADAR BROWSER DA TEST EDILEBILIYOR
+
+
+    XML 'i calistirdigimda once secmis oldugum classa fider
+    sonra TestBaseCross clasina gider ve driver 'a gider beforeMethodunu cakistirir
+    icine driver atamak icinde CrossDriver class'ina gider atamayi yapmis oluruz-->

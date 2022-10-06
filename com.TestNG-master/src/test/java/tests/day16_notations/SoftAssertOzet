@@ -1,0 +1,57 @@
+
+-->Softassertion baslangic ve bitis satirlari arasindaki
+              tum assertion'lari yapip
+              bitis satirina geldiginde bize buldugu tum hatalari rapor eder
+
+              Baslangici ve bitisi biz belirleriz
+
+
+
+-->1ADIM :softAssert BASLANGICI OBJE OLUSTURMAKTIR  ***********************
+
+         SoftAssert softAssert = new SoftAssert();
+
+-->2.ADIM : Istedigimiz sayida verification’lari yapalim
+
+            softAssert.assertTrue( );
+            softAssert.assertFalse( ); ….
+
+-->3.ADIM :softAssert'e BITIS SATIRINI SOYLEMEK ICIN assertAll() KULLANILIR *********************
+
+            softAssert.assertAll();
+                               bu satir yazilmazsa assertion gorevi yapilmamis olur
+
+-->softAssert'un hata bulsa bile calismaya devam etme ozelligi
+                assertAll()'a kadardir
+
+             Eger assertAll()'da failed rapor edilirse calisma durur
+             ve class'in kalan kismi calistirilmaz
+             (Yani assertAll hardAssert'deki her bir assert gibidir hatayi yakalarsa calisma durur)
+
+-->HardAssertion : yani JUnit de kullandigimiz assertion
+                   ilk hata aldiginda calismayi durdurup FAILED veriyor
+
+
+-->SoftAssertion : tum testler sonuna kadar calisiyor ve
+                   en son hata aldigi yerlerin hepsini tek tek raporluyor
+                   herhangi bir assertion FAILED olsa bile sonuna kadar
+                   calismaya devam eder
+
+
+-->birden fazla hata cikabilecegi icin
+   hata mesajlarini da burada yanlarina yaziyoruz
+
+             softAssert.assertTrue(searchBox.isEnabled(),"arama kutusuna erisilemiyor");
+
+
+
+                        Soft Assert vs Hard Assert
+  ● Ortak ozellikleri
+             SoftAssert ve HardAssert method’ları TestNG’den gelmektedir.
+             Kullanma amaçları farklı olsa da method’lar aynıdır.
+
+  ● Farklari
+             • Hard Assertion fail olursa test method’larının execute etmesi durur. Ve FAILED olarak
+             tanımlanır.
+             • Eğer softAssert FAIL olursa test method’ları execute etmeye devam eder. assertAll
+             dedigimizde FAILED olan assertion varsa execution durur.Test NG
