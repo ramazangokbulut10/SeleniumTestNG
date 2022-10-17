@@ -9,6 +9,9 @@ import org.testng.annotations.Parameters;
 import java.time.Duration;
 
 public class TestBaseCross {
+
+    //BU classı  istedigimiz browser da calistirabilmek icn duzenledik
+
     protected WebDriver driver;
 
     @Parameters ("browser")

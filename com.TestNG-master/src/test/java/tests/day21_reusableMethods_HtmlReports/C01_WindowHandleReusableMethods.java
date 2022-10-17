@@ -16,15 +16,18 @@ public class C01_WindowHandleReusableMethods {
         //https://the-internet.herokuapp.com/windows adresine gidin
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");
         String ilkSayfaWH = Driver.getDriver().getWindowHandle();
+        // Click yapmadan önce ilk sayfanın handle'nı aldık.
+
         // Click Here butonuna basin
         Driver.getDriver().findElement(By.linkText("Click Here")).click();
 
         Set<String> windowHandleSet = Driver.getDriver().getWindowHandles();
 
         String ikinciSayfaWH="";
+
         for (String each:windowHandleSet
              ) {
-            if (!each.equals(ikinciSayfaWH)){
+            if (!each.equals(ilkSayfaWH)){
                 ikinciSayfaWH=each;
             }
           Driver.getDriver().switchTo().window(ikinciSayfaWH);
@@ -41,6 +44,8 @@ public class C01_WindowHandleReusableMethods {
 
     @Test
     public void test02() {
+
+        // ReusableMethods ile çözümü.
 
         //https://the-internet.herokuapp.com/windows adresine gidin
         Driver.getDriver().get("https://the-internet.herokuapp.com/windows");

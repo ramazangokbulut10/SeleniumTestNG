@@ -14,6 +14,10 @@ public class C06_SoftAssert extends TestBase {
     @Test (groups = "grup2")
     public void test01() {
 
+     // JUnitte Assertions'da hatayı bulunca kodu durdurup,direkt bize rapor veriyordu
+
+     // SoftAssertions'da öyle değil, tüm kodları inceliyor, tüm hataları toplu söylüyor.
+
      /*
     Softassertion baslangic ve bitis satirlari arasindaki
     tum assertion'lari yapip
@@ -47,6 +51,7 @@ public class C06_SoftAssert extends TestBase {
 
         // 6- Arama sonucunun Nutella icerdigini test edin
         softAssert.assertTrue(sonucYaziElementi.getText().contains("Kutella"),"sonuc yazisi Kutella icermiyor");
+        // obje adı ile kontrol ederiz.
 
         // softAssert'e BITIS SATIRINI SOYLEMEK ICIN assertAll() KULLANILIR *********************
         // bu satir yazilmazsa assertion gorevi yapilmamis olur
@@ -55,6 +60,8 @@ public class C06_SoftAssert extends TestBase {
 
         System.out.println("assertion'lardan fail olan olursa, burasi calismaz");
                          // bu yazi tum assertionlar PASSED olursa calisir
+        //  softAssert.assertAll(); methodunu yazdıktan sonra, junit özelliğine döner gibi olur,
+        //  çünkü hatayı görür görmez çalıştırmayacak hale gelecek.
 
         /*
         Softassert'un hata bulsa bile calismaya devam etme ozelligi

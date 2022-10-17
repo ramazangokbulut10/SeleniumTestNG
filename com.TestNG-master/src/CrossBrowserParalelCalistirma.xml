@@ -15,3 +15,5 @@
         </classes>
     </test>
 </suite>
+
+<!-- testleri aynı anda farklı tarayıcıda çalıştırdık.-->

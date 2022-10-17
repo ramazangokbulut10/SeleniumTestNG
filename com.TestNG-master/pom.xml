@@ -65,6 +65,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <!-- Yaptığımız testin raporlarını göstermek için kullanırız. mvnrepository'den indiriyoruz her zaman ki gibi -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>

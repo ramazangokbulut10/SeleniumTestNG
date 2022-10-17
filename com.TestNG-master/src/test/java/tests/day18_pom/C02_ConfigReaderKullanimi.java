@@ -19,10 +19,10 @@ public class C02_ConfigReaderKullanimi {
 
         //cikarsa cookies kabul edin  // BENDE ÇIKMADİ
 
-        //kullanici mail kutusuna rastgele bir isim yazdirin
+        //kullanici mail kutusuna yanlıs kullanıcı adı yazdirin
          facebookPage.mailKutusu.sendKeys(ConfigReader.getProperty("fbWrongUsername"));
 
-        //kullanici sifere kutusunsa rastgele bir password yazdirin
+        //kullanici sifere kutusunsa yanlis bir password yazdirin
         facebookPage.sifreKutusu.sendKeys(ConfigReader.getProperty("fbWrongPassword"));
 
         //login butonuna basin

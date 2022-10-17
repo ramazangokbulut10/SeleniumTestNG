@@ -9,7 +9,7 @@ public class C02_BeforeClass_AfterClass extends TestBase {
 
     // JUnit'de @BeforeClass ve @AfterClass notasyonuna sahip
     // method'lar static olmak ZORUNDAYDI
-    // TestNG bu ZORUNLULUK'TAN bizi kurtarir
+    // TestNg zorunlu değil.
 
     /*
     TestNG bize daha fazla before ve after notasyonlari sunar

@@ -9,6 +9,14 @@ import org.testng.annotations.BeforeMethod;
 public class TestBase {
     // abstract yapmamizin sebebi bu class'dan obje olusturulmasinin onune gecmektir
 
+    // @BeforeMethod ve @AfterMethod notasyonlari
+
+    // JUnit'deki @Before ve @After gibidir
+
+    // her test method'undan once ve sonra calisirlar
+
+    // PageObjectModel'den önce, kullandığımız yöntem için ayarlamıştık, Extends yaparak kullanırdık :)
+
     protected WebDriver driver;
 
     @BeforeMethod

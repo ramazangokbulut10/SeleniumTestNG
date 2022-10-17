@@ -9,6 +9,8 @@ public class C01_BeforeMthd_AfterMthd extends TestBase {
     // JUnit'deki @Before ve @After gibidir
     // her test method'undan once ve sonra calisirlar
 
+    // TestNG Alfabetik sıraya göre çalıştırır.
+
     @Test
     public void amazonTesti() {
         driver.get("https://amazon.com");

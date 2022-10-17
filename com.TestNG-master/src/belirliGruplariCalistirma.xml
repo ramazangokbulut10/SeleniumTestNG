@@ -18,8 +18,8 @@
     <test name="belirli gruplar">
         <groups>
             <run>
-                <exclude name="grup1"></exclude>
-                <include name="grup2"></include>
+                <exclude name="grup2"></exclude>
+                <include name="grup1"></include>
             </run>
          </groups>
         <packages>
@@ -28,3 +28,7 @@
         </packages>
     </test>
 </suite>
+        <!--
+           Çalışmayanlar,Extends'den çalışmıyor,sadece bunları grupladık, sadece grupladıklarımız çalışsın istiyoruz,
+           o yüzden hata alıyoruz. Çalışması için,testBase içindeki methodlarıda gruplamak lazım.
+           -->

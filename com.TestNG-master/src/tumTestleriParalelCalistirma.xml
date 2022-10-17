@@ -12,4 +12,11 @@
   1.class'i bir browser 2. class'i 2.browser gibi sirayla calistiriyor
   paralel calistirmanin seviyesini burada classes olarak belirledik fakat
   buyuk projelerde birbirine bagli calisan class'lar varsa bunu dikkate almak lazim
-  o zaman class seviyesinde farkli browser'larda calismak sorun olabilir-->
+  o zaman class seviyesinde farkli browser'larda calismak sorun olabilir
+  Count aynı anda kaç tane browser çalışsın diye söylediğimiz şey.
+  paralel çalıştırmanın classes seviyesinde olduğunu söyledik.
+   -->
+
+
+
+

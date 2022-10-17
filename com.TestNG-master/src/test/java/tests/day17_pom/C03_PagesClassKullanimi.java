@@ -19,7 +19,7 @@ public class C03_PagesClassKullanimi {
         //cikarsa cookies kabul edin  // BENDE ÇIKMADİ
 
         //kullanici mail kutusuna rastgele bir isim yazdirin
-         Faker faker = new Faker();
+         Faker faker = new Faker(); // rastgele bir e posta ve password girmek için faker oluşturduk.
          facebookPage.mailKutusu.sendKeys(faker.internet().emailAddress());
 
         //kullanici sifre kutusunsa rastgele bir password yazdirin

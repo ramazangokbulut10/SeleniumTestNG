@@ -16,10 +16,10 @@
     </test>
 </suite>
 
-<!-- PRAMETREM BROWSER VE DEGERİ OLARAK HANGISINDE CALISMASINI ISTIYORSAM ONU GIRIYORUM
-    VE SEVMIS OLDUGUM CLASSLAR AYNI ANDA ISTEDIGIM KADAR BROWSER DA TEST EDILEBILIYOR
+<!-- PARAMETREM BROWSER VE DEGERİ OLARAK HANGISINDE CALISMASINI ISTIYORSAM ONU GIRIYORUM
+    VE SECMIS OLDUGUM CLASSLAR AYNI ANDA ISTEDIGIM KADAR BROWSER DA TEST EDILEBILIYOR
 
 
-    XML 'i calistirdigimda once secmis oldugum classa fider
-    sonra TestBaseCross clasina gider ve driver 'a gider beforeMethodunu cakistirir
+    XML 'i calistirdigimda once secmis oldugum classa gider
+    sonra TestBaseCross clasina gider ve driver 'a gider beforeMethodunu calistirir
     icine driver atamak icinde CrossDriver class'ina gider atamayi yapmis oluruz-->

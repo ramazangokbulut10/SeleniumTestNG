@@ -9,7 +9,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class CrossDriver {
+public class  CrossDriver {
 
     //BU classı xml ile baglanti kurup istedigimiz browser da calistirabilmek icn duzenledik
 

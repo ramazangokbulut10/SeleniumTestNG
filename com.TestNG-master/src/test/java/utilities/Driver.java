@@ -12,6 +12,8 @@ import java.time.Duration;
 
 public class Driver {
 
+    // Bu class driverleri yönetmek için yapıldı.
+
     /*
     POM'de Driver icin TestBase class'ina extends etmek yerine
     Driver class'indan static method'lar kullanarak
@@ -32,19 +34,20 @@ public class Driver {
 
     // HER ZAMAN KULLANABİLECEGİMİZ HAZİR SABLON
 
-     private Driver(){
+     private Driver(){ // tekli kullanim, bir class'in farkli class'lardan
+                      // obje olusturarak kullanimini engellemek icin kullanilir
 
       }
-     static WebDriver driver;
+     static WebDriver driver; // Driveri'de hem açma,hem kapatma methodlarında kullanmak için burda oluşturduk.
 
     public static WebDriver getDriver(){
 
-        if (driver==null) {
+        if (driver==null) { // Daha önce drivere değer atanmamışsa bu işle  mi yap dedik.
             switch (ConfigReader.getProperty("browser")){
 
                 case "chrome" :
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(); // sürekli yeni browser açıyor bu kod ile.
                     break;
 
                 case "safari" :
@@ -75,7 +78,7 @@ public class Driver {
     }
 
     public static void closeDriver(){
-        if(driver!=null) {
+        if(driver!=null) { // Driver'a değer atanmışsa
             driver.close();
             driver=null;
         }

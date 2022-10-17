@@ -4,7 +4,7 @@
                             bu siteden ekliyoruz-->
 <!-- Bir xml dosyasi ile projemizde istedigimiz testleri, package'leri
      class'lari veya test method'larini calistirabiliriz
-     Bunun icin yapmamiz gerekn; suite'den baslayip
+     Bunun icin yapmamiz gereken; suite'den baslayip
      test hiyerarsinine uygun olarak calisacak tum testleri
      xml formatinda yazmamizdir.
 
@@ -14,7 +14,7 @@
 
      -->
 
-<suite name="istenen class'lari calistirma">
+<suite name="istenen class'lari calistirma"> <!--ismi önemli değil.  -->
      <test name="classlar">
          <classes>
              <class name="tests.day16_notations.C03_Priority"></class>

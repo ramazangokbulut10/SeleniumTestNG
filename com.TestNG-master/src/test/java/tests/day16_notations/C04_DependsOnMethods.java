@@ -10,16 +10,23 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import utilities.TestBase;
+
 
 import java.time.Duration;
 
 public class C04_DependsOnMethods {
 
     /*
+
+    TestBase üzerinden yapmadık, çünkü orda sadece "BeforeAfterMethodu" var, burda test 1'de amazonu açıp kapatınca
+    test2'de amazona gitmediğimiz için hata alırız.
+
+     */
+
+    /*
     DependsOnMethods test method'larinin calisma siralamasina karismaz
     Sadece bagli olan test, baglandigi testin sonucuna bakar
-    baglandigi test PASSED olmazsa, baglanan test hic calismaz(ignore)
+    baglandigi test PASSED olmazsa, baglanan test hic calismaz(ignore) olur.
      */
 
     WebDriver driver;
@@ -39,23 +46,23 @@ public class C04_DependsOnMethods {
 
     @Test
     public void test1() {
-// AMAZON ANASAYFAYA GIDELIM
+    // AMAZON ANASAYFAYA GIDELIM
         driver.get("https://amazon.com");
 
     }
 
     @Test (dependsOnMethods = "test1") // testimizin çalismasinin hangi method a bagli oldugunu gösteriyor
     public void test2() {
-//NUTELLA ARATALIM
-        WebElement searchBox=driver.findElement(By.id("twotabsearchtextbox"));
+    //NUTELLA ARATALIM
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Nutella" + Keys.ENTER);
     }
 
 
 
-    @Test (dependsOnMethods = "test2")
+    @Test (dependsOnMethods = "test2") // test 3'ü test 2'iye bağladık.
     public void test3() {
- //SONUC YAZISININ NUTELLA ICERDIGINI TEST EDELIM
+    //SONUC YAZISININ NUTELLA ICERDIGINI TEST EDELIM
 
     WebElement sonucYaziElementi=driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
     Assert.assertTrue(sonucYaziElementi.getText().contains("Nutella"));

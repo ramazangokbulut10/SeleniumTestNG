@@ -7,9 +7,12 @@ import utilities.Driver;
 
 public class AmazonPage {
 
-    public AmazonPage(){
+    public AmazonPage(){ // public bilerek yaptık her yerden ulaşalım diye. Constructor bu oluşturduğumuz şey.
 
         PageFactory.initElements(Driver.getDriver(),this);
+        /*
+        Constructor oluşturarak, Drivere bu şeye tanıttık. Eşleştirdik,tanıştırdık :)
+         */
     }
 
     @FindBy(id="twotabsearchtextbox")

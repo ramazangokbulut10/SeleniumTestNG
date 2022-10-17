@@ -15,6 +15,9 @@ import java.util.function.Function;
 
 public class ReusableMethods {
 
+    // Çok kullandığımız ve her zaman ihtiyacımız olan şeyleri bu class'a attık.
+    // Lazım oldukça kopyalaya yapıştır kullan. Ekran görüntüsü, Windowlara geçiş falan.
+
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());

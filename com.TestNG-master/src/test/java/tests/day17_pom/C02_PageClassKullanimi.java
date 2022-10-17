@@ -10,7 +10,7 @@ public class C02_PageClassKullanimi {
 
     @Test
     public void test01() {
-        AmazonPage amazonPage = new AmazonPage();
+        AmazonPage amazonPage = new AmazonPage(); // AmazonPage ulaşmak için obje oluşturduk.
 
         //amazona gidelim
         Driver.getDriver().get("https://amazon.com");

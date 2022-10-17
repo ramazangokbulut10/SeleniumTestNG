@@ -12,13 +12,16 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+ // TestNG'de rapor almak için oluşturduğumuz hazır classtır.
+
+
 public abstract class TestBaseRapor {
     protected static ExtentReports extentReports; // extent report'a ilk atamayi yapar
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
 
    
-    // Test islemine baslamadan hemen once (test methodundan once degil, tum test isleminden once calisir
+    // Test islemine baslamadan hemen once (test methodundan once degil, tum test isleminden once calisir)
     @BeforeTest(alwaysRun = true) // alwaysRun : her zaman calistir
     
     public void setUpTest() {
@@ -35,7 +38,7 @@ public abstract class TestBaseRapor {
         // istediginiz bilgileri buraya ekleyebiliyorsunuz
         extentReports.setSystemInfo("Enviroment", "Test");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser"));
-        extentReports.setSystemInfo("Automation Engineer", "Feyza Ayhan");
+        extentReports.setSystemInfo("Automation Engineer", "Ramazan Gökbulut");
         extentHtmlReporter.config().setDocumentTitle("Rapor");
         extentHtmlReporter.config().setReportName("TestNG Reports");
     }
@@ -49,7 +52,7 @@ public abstract class TestBaseRapor {
             extentTest.fail(result.getName());
             extentTest.addScreenCaptureFromPath(screenshotLocation);
             extentTest.fail(result.getThrowable());
-        } else if (result.getStatus() == ITestResult.SKIP) { // eger test caliatirilmadan gecilme
+        } else if (result.getStatus() == ITestResult.SKIP) { // eger test çalıştırılmadan gecilme
             extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
         }
 

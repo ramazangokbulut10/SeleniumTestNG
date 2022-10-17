@@ -5,19 +5,20 @@
     method secmemizin temel amaci class icerisinde sadece belirlenen methodlarin calismasi
     veya belirlenen methodlar disindaki tum methodlarin calismasidir.
 
-    Eger CALISACAK spesifik methodlar'i belirtmek istersek  *** inclusive ***
-    CALISMAYACAK spesifik methos'lair belirtmek istersek    *** exclusive *** keyword'leri kullanilir
+    Eger CALISACAK spesifik methodlar'i belirtmek istersek  *** include ***
+    CALISMAYACAK spesifik methos'lair belirtmek istersek    *** exclude *** keyword'leri kullanilir
 
     Eger methodlar depensOnMethods ile birbirine baglanmissa
-    xml dosyasi calisirken caliski olusmamasi lazim
-    caliski durumunda selenium testleri calismaz
+    xml dosyasi calisirken celiski olusmamasi lazim
+    celiski durumunda selenium testleri calistirmaz.
     depensOnMethods bu methodlar calismak icin baska methodlara baglidir
 
     suit tag'inin icine yazilacak verbose attribute
-    konsolda cikan mesajlarin daha az veya daha cok olmasini belirler
+    konsolda cikan hata mesajlarinin daha az veya daha cok olmasini belirler
     1 en az
     10 en cok
     -->
+
     <test name="method">
       <classes>
           <class name="tests.day16_notations.C03_Priority">

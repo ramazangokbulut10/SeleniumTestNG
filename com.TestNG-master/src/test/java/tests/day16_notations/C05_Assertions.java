@@ -28,8 +28,7 @@ public class C05_Assertions extends TestBase {
         searchBox.sendKeys("Nutella" + Keys.ENTER);
 
         // 5- Arama yapildigini test edin
-        WebElement sonucYaziElementi =
-                driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        WebElement sonucYaziElementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         Assert.assertTrue(sonucYaziElementi.isDisplayed());
 
         // 6- Arama sonucunun Nutella icerdigini test edin
